@@ -1,9 +1,10 @@
 p{
     font-size:  x-large;
+    justify-content: center;
 }
 body{
     background: linear-gradient(rgb(4, 79, 192),rgb(0, 183, 255), rgb(4, 83, 231), rgb(0, 183, 255));
-        
+    
 }
 h1{
     text-align: center;
@@ -40,54 +41,66 @@ margin-bottom: 2%;
 }
 .szczupak{
     margin-left: 10%;
-    border: 2px solid grey;
+    border: 2px solid darkgreen;
     margin-right: 5%;
+    text-align: center;
+
     
 }
 .okon{
     margin-right: 10%;
-    border: 2px grey solid;
+    border: 2px darkgreen solid;
+    text-align: center;
+
 }
 .sum{
     margin-left: 10%;
-    border: 2px solid grey;
+    border: 2px solid darkgreen;
     margin-right: 5%;
+    text-align: center;
+
 
 }
 .sandacz{
+    text-align: center;
     margin-right: 10%;
-    border: 2px grey solid;
+    border: 2px darkgreen solid;
 }
 .ploc{
     margin-top: 20px;
     margin-left: 10%;
-    border: 2px solid grey;
+    border: 2px solid darkgreen;
     margin-right: 5%;
+    text-align: center;
+
 }
 .lin{
     margin-top: 20px;
     margin-right: 10%;
-    border: 2px grey solid;
+    border: 2px darkgreen solid;
+    text-align: center;
+
 }
 .metody{
     
     margin-top: 20px;
     margin-left: 10%;
-    border: 2px solid grey;
+    border: 2px solid darkgreen;
     margin-right: 5%;
+    text-align: center;
+
 }
 .sprzet{
+    text-align: center;
+
     margin-top: 20px;
     margin-right: 10%;
-    border: 2px grey solid;
+    border: 2px darkgreen solid;
 }
 a{
     text-decoration: none;
-    justify-content: center;
-    align-items: center; 
-    text-align: center;
     margin-bottom: 30px;    
-    margin-left: 45%;
+    font-size: 2vw;
 }
 .row1{
     margin-top: 1%;
@@ -141,8 +154,10 @@ h4{
     margin-left: 1px;
 }
 .obr{
-    width: 38%;
+    width: 30vw;
+    height: 20vw;
     margin-right: 1px;
+    border: solid black 3px;
 }
 a:hover{
     text-shadow: black 3px 3px 10px;
@@ -154,4 +169,14 @@ a:hover{
 .metody:hover{
     box-shadow: 10px 10px 30px;
 
+}
+.obr1{
+    height: 95%;
+    width: 95%;
+    margin-left: 0.9vw;
+}
+@media(orientation:portrait){
+    a{
+        font-size: 3vw;
+    }
 }
