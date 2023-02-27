@@ -42,6 +42,7 @@ margin-bottom: 2%;
     border: 2px solid darkgreen;
     margin-right: 5%;
     text-align: center;
+    border-radius: 1vw;
 
     
 }
@@ -49,6 +50,7 @@ margin-bottom: 2%;
     margin-right: 10%;
     border: 2px darkgreen solid;
     text-align: center;
+    border-radius: 1vw;
 
 }
 .sum{
@@ -56,13 +58,14 @@ margin-bottom: 2%;
     border: 2px solid darkgreen;
     margin-right: 5%;
     text-align: center;
-
+    border-radius: 1vw;
 
 }
 .sandacz{
     text-align: center;
     margin-right: 10%;
     border: 2px darkgreen solid;
+    border-radius: 1vw;
 }
 .ploc{
     margin-top: 20px;
@@ -70,6 +73,7 @@ margin-bottom: 2%;
     border: 2px solid darkgreen;
     margin-right: 5%;
     text-align: center;
+    border-radius: 1vw;
 
 }
 .lin{
@@ -77,6 +81,7 @@ margin-bottom: 2%;
     margin-right: 10%;
     border: 2px darkgreen solid;
     text-align: center;
+    border-radius: 1vw;
 
 }
 .metody{
@@ -86,11 +91,12 @@ margin-bottom: 2%;
     border: 2px solid darkgreen;
     margin-right: 5%;
     text-align: center;
+    border-radius: 1vw;
 
 }
 .sprzet{
     text-align: center;
-
+    border-radius: 1vw;
     margin-top: 20px;
     margin-right: 10%;
     border: 2px darkgreen solid;
@@ -156,6 +162,8 @@ h4{
     height: 20vw;
     margin-right: 1px;
     border: solid black 3px;
+    border-radius: 1vw;
+
 }
 a:hover{
     text-shadow: black 3px 3px 10px;
