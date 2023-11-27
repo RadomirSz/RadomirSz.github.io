@@ -1,7 +1,5 @@
 body{
     display: block;
-
-    /* background-image: linear-gradient(to bottom right, #86af49 , #b5e7a0 ); */
     background-color: rgb(221, 230, 227);
     height: 100vh;
     overflow: hidden;
@@ -26,7 +24,6 @@ button{
     font-family:cursive;
     width: 10vw;
     border-radius: 3%;
-    /* background-color:  #82b74b; */
     border: grey solid 1px;
 }
 button:hover{
