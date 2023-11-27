@@ -4,20 +4,13 @@ function add(x)
 {
     dzialanie += document.getElementById(x).value;
     document.getElementById("ekran").innerHTML = dzialanie;
-    console.log("dodało");
-    if(dzialanie.slice(dzialanie.length - 1 , dzialanie.length) && x == 0)
-    {
-       document.getElementById("ekran").innerHTML = "nie dziel przez zero";
-       
-    }
 }
 
 function wynik()
 {
     if(dzialanie == "")
     {
-        document.getElementById("ekran").innerHTML = "nic nie dałeś baranie";
-        console.log("pustka");
+        document.getElementById("ekran").innerHTML = "nic nie dałeś";
     }
     else
     {
