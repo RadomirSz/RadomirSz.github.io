@@ -10,7 +10,7 @@ function wynik()
 {
     if(dzialanie == "")
     {
-        document.getElementById("ekran").innerHTML = "nic nie dałeś";
+        document.getElementById("ekran").innerHTML = "Najpierw podaj działanie";
     }
     else
     {
@@ -27,17 +27,7 @@ function czysc(){
 }
 
 function del(){
-    if(dzialanie.length == 1)
-    {
-        dzialanie = "";
-    }
-
-    dzialanie = dzialanie.slice(0,dzialanie.length - 1);
-    if(dzialanie.length > 0){
-        document.getElementById("ekran").innerHTML = dzialanie;
-    }
-    else{
-        document.getElementById("ekran").innerHTML = "";
-        dzialanie = "";
-        }
+    if(dzialanie.length == 1) dzialanie = "";
+    else dzialanie = dzialanie.slice(0,dzialanie.length - 1);
+    document.getElementById("ekran").innerHTML = dzialanie;
 }
