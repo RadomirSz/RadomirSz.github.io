@@ -15,7 +15,7 @@
     </head>
     <body id="body">    
     
-        <input type="text" id="ijput"></input>
+        <p>3.<input type="text" id="ijput"></input></p>
         <div class="div" id="tekst"></div>
         <div class="div" id="odp"></div>
         
@@ -38,8 +38,8 @@
             {
                 out = "wrong";
                 document.getElementById("tekst").innerHTML = out;
+                document.getElementById("odp").innerHTML = "next two numbers: " + PI[i+1] +","+ PI[i+2];
                 i = 0;
-                document.getElementById("odp").innerHTML = "next two numbers: " + PI[i+1] + PI[i+2];
                 //document.getElementById("body").style.backgroundColor = "red";
             }
         }
