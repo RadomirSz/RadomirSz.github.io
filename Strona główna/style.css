@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(236, 245, 250);
+}
+.button{
+    width: 20vw;
+    border: rgb(122, 122, 122) solid 2px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer{
+    margin-top: 70vh;
+    border-top: solid black 1px;
+}
