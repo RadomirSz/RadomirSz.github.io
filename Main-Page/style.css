@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(225, 228, 230);
+    margin: 0;
+    padding: 0;
+}
+.button{
+    width: 10vw;
+    border: rgb(122, 122, 122) solid 2px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;  
+}
+footer{
+    margin-top: 65vh;
+    margin-left : 1vw;
+    margin-right: 1vw;
+    border-top: solid black 1px;
+}
+.tabelka{
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+}
