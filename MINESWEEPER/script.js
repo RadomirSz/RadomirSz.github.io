@@ -1,5 +1,4 @@
-
-// var emotki = ["😊","🙃","☹️","😎","💣"]; // default - click - lose - win - bomb
+const emojis = ["😊","🙃","☹️","😎","💣"]; // default - click - lose - win - bomb
 
 function start() {
     
@@ -47,6 +46,7 @@ function createField(fieldSize, mineCount)
             col.data('flagged', false);
             col.data("i", i);
             col.data("j", j);
+            col.data('mine', false);
             col.text("0");
             col.attr("data-col",j);
             col.attr("data-row",i);
@@ -64,9 +64,9 @@ function createField(fieldSize, mineCount)
             var randomCol = Math.floor(Math.random() * fieldSize);
             let cell = "." + randomRow + "-" + randomCol;
             var randomCell = $(cell);
-            if (!randomCell.hasClass('mine')) 
+            if (!randomCell.data('mine')) 
             { 
-                randomCell.addClass('mine');
+                randomCell.data('mine',true);
                 //randomCell.css('background-color',"red");
                 randomCell.removeClass("empty");
                 //console.log(cell + " got a mine");
@@ -83,7 +83,7 @@ function createField(fieldSize, mineCount)
             sum = 0;
 
             let currentCell = "." + (a) + "-" + (b);
-            if($(currentCell).hasClass("mine")) continue;
+            if($(currentCell).data('mine')) continue;
 
             let leftup = "." + (a-1) + "-" + (b-1);
             let midup = "." + (a) + "-" + (b-1);
@@ -95,21 +95,21 @@ function createField(fieldSize, mineCount)
             let rightbottom = "." + (a+1) + "-" + (b+1);
 
 
-            if($(leftup).hasClass('mine')) sum++;
+            if($(leftup).data('mine')) sum++;
             
-            if($(midup).hasClass('mine')) sum++;
+            if($(midup).data('mine')) sum++;
             
-            if($(rightup).hasClass('mine')) sum++;
+            if($(rightup).data('mine')) sum++;
 
-            if($(leftmid).hasClass('mine')) sum++;
+            if($(leftmid).data('mine')) sum++;
          
-            if($(rightmid).hasClass('mine')) sum++;
+            if($(rightmid).data('mine')) sum++;
         
-            if($(leftbottom).hasClass('mine')) sum++;
+            if($(leftbottom).data('mine')) sum++;
          
-            if($(midbottom).hasClass('mine')) sum++;
+            if($(midbottom).data('mine')) sum++;
         
-            if($(rightbottom).hasClass('mine')) sum++;
+            if($(rightbottom).data('mine')) sum++;
           
             if(!(sum === 0)) $(currentCell).removeClass("empty");
             
@@ -155,7 +155,7 @@ function createField(fieldSize, mineCount)
 }
 
 board.on('click', '.col.hidden', function (){
-    if($(this).hasClass('mine'))
+    if($(this).data('mine'))
     {
         gameOver(false);
     }
@@ -195,13 +195,14 @@ function reveal(oi, oj) {
       const mineCount = getMineCount(i, j);
       if (
         !$cell.hasClass('hidden') ||
-        $cell.hasClass('mine')
+        $cell.data('mine')
       ) {
         return;
       }
 
       $cell.removeClass('hidden');
       $cell.addClass('revealed');
+      
       if (mineCount) {
         return;
       }
