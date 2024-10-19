@@ -69,7 +69,7 @@ function createField(fieldSize, mineCount)
                 randomCell.addClass('mine');
                 //randomCell.css('background-color',"red");
                 randomCell.removeClass("empty");
-                console.log(cell + " got a mine");
+                //console.log(cell + " got a mine");
                 flag = false;
             }
         } while (flag);
