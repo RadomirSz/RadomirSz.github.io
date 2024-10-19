@@ -1,4 +1,4 @@
-<!DOCTYPEhtml>
+<!DOCTYPE html>
 <html lang = "en">
     <head>
         <meta charset="UTF-8">
@@ -43,6 +43,7 @@
             }
             else
             {
+                document.getElementById("imput").disabled = true;
                 out = "Wpisałeś " + i + " cyfr liczby pi!";
                 document.getElementById("tekst").innerHTML = out;
 
@@ -54,6 +55,7 @@
         }
         function reset()
         {
+            document.getElementById("imput").disabled = false;
            i = 0;
            out = "3.";
            document.getElementById("odp").innerHTML = '';
