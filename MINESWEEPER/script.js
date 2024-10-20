@@ -40,10 +40,8 @@ function createField(fieldSize, mineCount)
         for (var j = 0; j < fieldSize; j++) 
         {
             let number = i + "-" + j;
-            var col = $('<div>').addClass('col hidden empty');
-            
+            var col = $('<div>').addClass('col hidden');
             col.addClass(number);
-            col.data('flagged', false);
             col.data("i", i);
             col.data("j", j);
             col.data('mine', false);
@@ -67,10 +65,10 @@ function createField(fieldSize, mineCount)
             if (!randomCell.data('mine')) 
             { 
                 randomCell.data('mine',true);
-                //randomCell.css('background-color',"red");
-                randomCell.removeClass("empty");
-                //console.log(cell + " got a mine");
                 flag = false;
+
+                //randomCell.css('background-color',"red");
+                //console.log(cell + " got a mine");
             }
         } while (flag);
     }
@@ -96,23 +94,14 @@ function createField(fieldSize, mineCount)
 
 
             if($(leftup).data('mine')) sum++;
-            
             if($(midup).data('mine')) sum++;
-            
             if($(rightup).data('mine')) sum++;
-
             if($(leftmid).data('mine')) sum++;
-         
             if($(rightmid).data('mine')) sum++;
-        
             if($(leftbottom).data('mine')) sum++;
-         
             if($(midbottom).data('mine')) sum++;
-        
             if($(rightbottom).data('mine')) sum++;
-          
-            if(!(sum === 0)) $(currentCell).removeClass("empty");
-            
+                      
             switch (sum) 
             {
                 case 1:
@@ -183,7 +172,6 @@ function gameOver(outcome) {
     start();
 }
 
-
 function reveal(oi, oj) {
     const seen = {};
   
@@ -192,6 +180,7 @@ function reveal(oi, oj) {
       const key = `${i} ${j}`
       if (seen[key]) return;
       const $cell = $(`.col.hidden[data-row=${i}][data-col=${j}]`);
+      if ($cell.hasClass('flagged')) return;
       const mineCount = getMineCount(i, j);
       if (
         !$cell.hasClass('hidden') ||
@@ -205,6 +194,10 @@ function reveal(oi, oj) {
       
       if (mineCount) {
         return;
+      }
+      else
+      {
+        $cell.text("");
       }
       
       for (let di = -1; di <= 1; di++) {
@@ -229,3 +222,14 @@ function reveal(oi, oj) {
     if(obj.hasClass('eight')) return 8;
     return 0;
 }
+
+board.on('contextmenu', '.col.hidden', function () {
+    if($(this).hasClass('flagged'))
+    {
+        $(this).removeClass('flagged');
+    }
+    else
+    {
+        $(this).addClass('flagged');
+    }
+})
