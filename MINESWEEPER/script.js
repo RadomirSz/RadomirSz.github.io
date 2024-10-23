@@ -73,9 +73,6 @@ function createField(fieldSize, mineCount)
             { 
                 randomCell.data('mine',true);
                 flag = false;
-
-                //randomCell.css('background-color',"red");
-                //console.log(cell + " got a mine");
             }
         } while (flag);
     }
@@ -237,7 +234,6 @@ function reveal(oi, oj) {
     if(obj.hasClass('eight')) return 8;
     return 0;
 }
-console.log(getMineCounter);
 
 board.on('contextmenu', '.col.hidden', function () {
     if(remainingflags === 0 && !($(this).hasClass('flagged'))) return;
