@@ -8,28 +8,56 @@
     <link rel="icon" type="image/x-icon" href="pingwin.jpg">
 </head>
 <body>
-    <div class="button">
-        <a href="../Karkurator">
-            <p class="text">Karkurator</p>
-        </a>
-    </div>
-    <div class="button">
-        <a href="../Digits-of-Pi/">
-            <p class="text">π</p>
-        </a>
-    </div>
-    <div class="button">
-        <a href="../MINESWEEPER">
-            <p class="text">MINESWEEPER</p>
-        </a>
-    </div>
+    <div class="main">
 
+        <div class="top">
+            <img src="pingwin.jpg">
+            <a>Radomir</a>
+            <div class="quote">
+                <p id="quote"></p>
+            </div>
+        </div>
+
+        <div class="middle">
+    
+            <a href="../Karkurator">
+                <div class="button">
+                        <p class="text">KARKURATOR</p>
+                </div>
+            </a>
+
+            <a href="../Digits-of-Pi/">
+                <div class="button">
+                    <p class="text">π</p>
+                </div>
+            </a>
+
+            <a href="../MINESWEEPER">
+                <div class="button">
+                    <p class="text">MINESWEEPER</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+    
     <footer>
         <table class="tabelka">
             <tr>
-                <td><img src="GitHub-logo.png" width="80px" href="https://github.com/RadomirSz"></td>
+                <td><a href="https://github.com/RadomirSz"><img src="GitHub-logo.png" width="80px"></a></td>
             </tr>
         </table>
     </footer>
+
+    <script>
+
+        const quotes = [
+            "Telling the truth is crazy in a world full of lies.",
+            //"The best time to plant a tree is 20 years ago, second best time is now."
+            ""
+        ];
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        document.getElementById("quote").innerHTML = randomQuote;
+    </script>
 </body>
 </html>

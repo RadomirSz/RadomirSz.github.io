@@ -1,23 +1,70 @@
 body{
-    background-color: rgb(225, 228, 230);
+    background-color: rgb(237, 239, 240);
     margin: 0;
     padding: 0;
+    height: 90vh;
 }
-.button{
-    width: 10vw;
-    border: rgb(122, 122, 122) solid 2px;
-    border-radius: 10px;
-    text-align: center;
+
+.main{
+    height: 90vh;
+}
+.top{
+    margin-left: 12.5vw;
+    margin-top: 2vh;
+}
+
+.top a{
+    font-size: 6vh;
+}
+
+.top img{
+    height: 5vh;
+    width: 5vh;
+    border-radius: 100%;
+}
+
+
+.middle{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1vh;  
+    width: 60vw;
+    display: flex;
 }
+
+.button {
+    background-color: #0068d8;
+    color: #ffffff;
+
+    padding: 15px;    
+    width: 6vw;
+    margin-left: 1vw;
+    border-radius: 5px;
+
+    text-align: center;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  }
+  
+  .middle a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .button:hover {
+    background-color: #004288;
+  }
+
+
+
 footer{
-    margin-top: 65vh;
+    margin-bottom: 0;
     margin-left : 1vw;
     margin-right: 1vw;
     border-top: solid black 1px;
 }
+
 .tabelka{
     margin-top: 1vh;
     margin-left: auto;
