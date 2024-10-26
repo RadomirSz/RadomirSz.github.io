@@ -42,6 +42,7 @@
     </div>
     
     <footer>
+        <h1>Man what resolution are you on, please change it</h1>
         <table class="tabelka">
             <tr>
                 <td><a href="https://github.com/RadomirSz"><img src="GitHub-logo.png" width="80px"></a></td>
@@ -53,11 +54,10 @@
 
         const quotes = [
             "Telling the truth is crazy in a world full of lies.",
-            //"The best time to plant a tree is 20 years ago, second best time is now."
-            ""
+            "The best time to plant a tree is 20 years ago, second best time is now."
         ];
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-        document.getElementById("quote").innerHTML = randomQuote;
+        document.getElementById("quote").innerHTML = "Quote: " + randomQuote;
     </script>
 </body>
 </html>

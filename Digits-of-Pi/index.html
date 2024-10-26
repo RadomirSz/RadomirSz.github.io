@@ -7,7 +7,7 @@
         <style>
             body{
                 text-align: center;
-                padding-top: 35vh;
+                padding-top: 10vh;
                 font-size: xx-large;
                 background-color: rgb(229, 246, 247);
             }
@@ -18,7 +18,8 @@
         </style>
     </head>
     <body id="body">    
-    
+        <h1>Ćwicz pamięć z liczbą π!</h1>
+        <p>Wpisz cyfry liczby π poniżej:</p>
         <p>3.<input type="text" id="imput" placeholder="cyfry tutaj"></p>
         <div class="div" id="tekst"></div>
         <div class="div" id="odp"></div>
@@ -44,11 +45,28 @@
             else
             {
                 document.getElementById("imput").disabled = true;
-                out = "Wpisałeś " + i + " cyfr liczby pi!";
+                switch (i) {
+                    case 1:
+                        out = "Wpisałeś 1 cyfrę liczby π!";
+                        break;
+                    case 2:
+                        out = "Wpisałeś " + i +" cyfry liczby π!";
+                        break;
+                    case 3:
+                        out = "Wpisałeś " + i +" cyfry liczby π!";
+                        break;
+                    case 4:
+                        out = "Wpisałeś " + i +" cyfry liczby π!";
+                        break;
+                    default:
+                        out = "Wpisałeś " + i + " cyfr liczby π!";
+                        break;
+                }
+                
                 document.getElementById("tekst").innerHTML = out;
 
                 
-                document.getElementById("odp").innerHTML = "Następne cyfry pi to: " + PI[i] + ", " + PI[i+1] + ", " + PI[i+2];
+                document.getElementById("odp").innerHTML = "Następne cyfry π to: " + PI[i] + ", " + PI[i+1] + ", " + PI[i+2];
                 i = 0;
                 //document.getElementById("body").style.backgroundColor = "red";
             }
