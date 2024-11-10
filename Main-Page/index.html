@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="pingwin.jpg">
 </head>
-<body>
+<body class="theme1">
     <div class="main">
 
         <div class="top">
             <img src="pingwin.jpg">
             <a>Radomir</a>
+            <select name="theme" id="theme" onchange="changeTheme()">
+                <option value="theme1">Theme 1</option>
+                <option value="theme2">Theme 2</option>
+            </select>
             <div class="quote">
                 <p id="quote"></p>
             </div>
@@ -60,10 +64,21 @@
             "Cold water feels warm when your hands are freezing.",
             "Every river reaches ocean in it's own way.",
             "The right doors won't open for you until you're the version of yourself that's supposed to walk through them.",
-            "Stay small enough long enough and you'll be big enough soon enough."
+            "Stay small enough long enough and you'll be big enough soon enough.",
+            "The ship is safe at the shore, but that's not what it is built for.",
+            "One day missed is a mistake, the second one is a beggining of a new habit."
         ];
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
         document.getElementById("quote").innerHTML = "Quote: " + randomQuote;
+
+
+        const themeSelector = document.getElementById('theme');
+
+        themeSelector.addEventListener('change', function() {
+            document.body.classList.remove('theme1', 'theme2');
+            document.body.classList.add(themeSelector.value);
+        });
+        
     </script>
 </body>
 </html>
