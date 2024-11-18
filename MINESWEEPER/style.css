@@ -24,8 +24,8 @@ h1{
 .buttons{
     margin-bottom: 1vh;
     margin-top: 1vh;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
 }
 .flags{
@@ -102,4 +102,35 @@ h1{
 
 .flagged{
     background-color: red !important;
+}
+
+@media(max-width: 1500px) and (min-width: 1000px){
+    .frame{
+        width: 18vw !important;
+    }
+}
+@media(max-width: 1000px) and (min-width: 800px){
+    .frame{
+        width: 27vw !important;
+    }
+}
+@media(max-width: 800px) and (min-width: 600px){
+    .frame{
+        width: 33vw !important;
+    }
+}
+@media(max-width: 600px) and (min-width: 550px){
+    .frame{
+        width: 44vw !important;
+    }
+}
+@media(max-width: 550px) and (min-width: 400px){
+    .frame{
+        width: 50vw !important;
+    }
+}
+@media(max-width: 400px){
+    .frame{
+        width: 70vw !important;
+    }
 }
