@@ -17,9 +17,9 @@
                 <option value="theme1">Theme 1</option>
                 <option value="theme2">Theme 2</option>
             </select>
-            <div class="quote">
+            <!-- <div class="quote">
                 <p id="quote"></p>
-            </div>
+            </div> -->
         </div>
 
         <div class="middle">
@@ -69,7 +69,8 @@
             "One day missed is a mistake, the second one is the beginning of a new habit.",
             "If you only do what you can do, you'll never be more than you are now.",
             "Be yourself so the people looking for you can find you.",
-            "You can't cry about having a lot on your plate when your goal was to eat."
+            "You can't cry about having a lot on your plate when your goal was to eat.",
+            "There's two people, one thinks he can, the other one thinks he can't. They're both right."
         ];
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
         document.getElementById("quote").innerHTML = "Quote: " + randomQuote;
