@@ -13,10 +13,10 @@
         <div class="top">
             <img src="pingwin.jpg">
             <a>Radomir</a>
-            <select name="theme" id="theme" onchange="changeTheme()">
+            <!-- <select name="theme" id="theme" onchange="changeTheme()">
                 <option value="theme1">Theme 1</option>
                 <option value="theme2">Theme 2</option>
-            </select>
+            </select> -->
             <!-- <div class="quote">
                 <p id="quote"></p>
             </div> -->
@@ -76,12 +76,12 @@
         document.getElementById("quote").innerHTML = "Quote: " + randomQuote;
 
 
-        const themeSelector = document.getElementById('theme');
+        // const themeSelector = document.getElementById('theme');
 
-        themeSelector.addEventListener('change', function() {
-            document.body.classList.remove('theme1', 'theme2');
-            document.body.classList.add(themeSelector.value);
-        });
+        // themeSelector.addEventListener('change', function() {
+        //     document.body.classList.remove('theme1', 'theme2');
+        //     document.body.classList.add(themeSelector.value);
+        // });
         
     </script>
 </body>
